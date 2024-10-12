@@ -1,0 +1,15 @@
+{
+  "name": "deno-issue-24845",
+  "version": "1.0.0",
+  "description": "This repo aims to reproduce the bug described at https://github.com/denoland/deno/issues/24845.",
+  "main": "main.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.12.2",
+    "@grpc/proto-loader": "^0.7.13"
+  }
+}

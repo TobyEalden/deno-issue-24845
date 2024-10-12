@@ -56,7 +56,7 @@ cmake/build/route_guide_server
 
 ## run the deno client
 
-Run the deno client from the root of this repo.
+Once the server is running, open a new terminal and run the deno client from the root of this repo.
 
 ```sh
 deno run -A main.ts
@@ -87,4 +87,25 @@ error: Uncaught (in promise) Error: stream error received: not a result of an er
 
 ```
 
+## run the nodejs client
+
+The equivalent code works as expected under nodejs.
+
+Start by checking out the `nodejs` branch.
+
+```sh
+git checkout nodejs
+```
+
+Install the dependencies.
+
+```sh
+npm install
+```
+
+Then run the nodejs client.
+
+```sh
+node main.mjs
+```
 

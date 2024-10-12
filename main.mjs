@@ -1,5 +1,5 @@
-import grpc from "npm:@grpc/grpc-js";
-import protoLoader from "npm:@grpc/proto-loader";
+import grpc from "@grpc/grpc-js";
+import protoLoader from "@grpc/proto-loader";
 
 const PROTO_PATH = "./route_guide.proto";
 
@@ -13,8 +13,7 @@ const packageDefinition = protoLoader.loadSync(PROTO_PATH, {
 
 const routeProto = grpc.loadPackageDefinition(packageDefinition).routeguide;
 
-// Learn more at https://docs.deno.com/runtime/manual/examples/module_metadata#concepts
-if (import.meta.main) {
+function main() {
   const client = new routeProto.RouteGuide(
     "localhost:50051",
     grpc.credentials.createInsecure()
@@ -52,3 +51,5 @@ if (import.meta.main) {
     });
   }, 1000);
 }
+
+main();
